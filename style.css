@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+
+:root{
+    
+--main-background: hsl(233, 47%, 7%);
+--card-background: hsl(244, 38%, 16%);
+--accent: hsl(277, 64%, 61%);
+
+
+
+--main-heading: hsl(0, 0%, 100%);
+--main-paragraph: hsla(0, 0%, 100%, 0.75);
+--stat-headings: hsla(0, 0%, 100%, 0.6);
+
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Inter', sans-serif;
+    font-family: 'Lexend Deca', sans-serif;
+    background: var(--main-background);
+}
+
+.container{
+    width: 90%;
+    height:500px;
+    background-color: var(--main-background);
+    margin: 60px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 767px){
+    .container{
+        flex-direction: column-reverse;
+        height: 90vh;
+        margin: 25px auto;
+    }
+}
+
+.container .info{
+    width: 48%;
+    padding-left: 50px;
+}
+
+
+@media (max-width: 767px){
+
+    .container .info{
+        width: 90%;
+        height: 60%;
+        text-align: center;
+        padding-left: 0;
+    }
+}
+
+.container .info h1{
+    color: var(--main-heading);
+    margin-bottom: 15px;
+}
+
+.container .info span{
+    color: var(--accent);
+}
+
+.container .info p{
+    color: var(--main-paragraph);
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.container .info .boxs{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+
+@media (max-width: 767px){
+
+    .container .info .boxs{
+        flex-direction: column;
+    }
+}
+
+.container .info .boxs .box p:first-child{
+    color: var(--main-heading);
+    font-weight: bold;
+    margin-bottom: 5px;
+
+}
+
+.container .info .boxs .box p:last-child{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.container .iamge{
+    width: 48%;
+    height: 100%;
+    background-image: url(images/image-header-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+
+@media (max-width: 767px){
+    .iamge{
+        width: 100%;
+        height: 35%;
+        background-image: url(images/image-header-mobile.jpg)
+    }
+}
+.container .iamge::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: hsl( 277deg 64% 61% /30%);
+
+}
